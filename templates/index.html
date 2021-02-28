@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Login</title>
+
+<style>
+body{
+     background: url({{ url_for ('static', filename = 'background.jpg') }});
+    background-repeat: no-repeat;
+    background-position: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+input{
+    width:40%;
+    height:40px;
+    border-radius:1rem;
+}
+input[type="submit"]{
+    background-color: green;
+    color:white;
+    font-size:22px;
+}
+h1{
+    font-size:60px;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">Login Page</h1>
+
+        <form align="center" action="check_user" method="POST">
+            <br> 
+            <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+            <br> 
+            <br> 
+            <input type="password" name="password" id="password" placeholder="Enter your password" required> 
+            <br> 
+            <br> 
+            <input type="submit" name="submit" value="Submit" >
+        </form>
+    </div>
+</body>
+</html>

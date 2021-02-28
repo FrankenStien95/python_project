@@ -1,0 +1,74 @@
+<html>
+<head>
+<style>
+.center{
+    text-align:center;
+}
+h1{
+    font-size:60px;
+}
+a{
+    text-decoration:none;
+}
+a.back{
+    padding: 10px;
+    color:white;
+    background-color: purple;
+    border: 1px solid;
+    border-radius: 5px;
+}
+a.edit{
+    padding: 5px;
+    color:white;
+    background-color: blue;
+    border: 1px solid;
+    border-radius: 5px;
+}
+a.delete{
+    padding: 5px;
+    color:white;
+    background-color: red;
+    border: 1px solid;
+    border-radius: 5px;
+
+}
+th{
+    text-transform: uppercase;
+}
+</style>
+</head>
+
+<body align="center" bgcolor="lightblue">
+
+    <h1>Student List </h1>
+    <a class="back" href="/home">Back</a>
+    <br>
+    <br>
+    <table border="1" cellspacing="10" cellpadding="10" bgcolor="pink">
+            <tr>
+                <th width="10%">id</th>
+                <th  width="10%" >Roll No</th>
+                <th  width="10%">Name</th>
+                <th  width="10%">college</th>
+                <th  width="10%">Email</th>
+                <th width="10%" >Contact No</th>
+                <th width="10%" >Address</th>
+                <th  width="10%" colspan="2">Action</th>
+            </tr>
+            {% for i in students %}
+            <tr>
+                <td class="center">{{i[0]}}</td>
+                <td class="center">{{i[4]}}</td>
+                <td class="center">{{i[1]}}</td>
+                <td class="center">{{i[3]}}</td>
+                <td class="center">{{i[5]}}</td>
+                <td class="center">{{i[6]}}</td>
+                <td class="center">{{i[7]}}</td>
+                <td class="center"><a class="edit" href="editStudent?id={{i[0]}}">Edit</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="delete" href="deleteStudent?id={{i[0]}}">Delete</a></td>
+            </tr>
+            {%endfor%}
+            
+      </table>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<html>
+<head>
+
+<style>
+a.home{
+    padding: 10px;
+    color:white;
+    background-color: purple;
+    border: 1px solid;
+    border-radius: 5px;
+}
+h1{
+    font-size:50px;
+}
+table tr td {
+    border:none;
+    text-align:right;
+    text-transform: uppercase;
+}
+.submit{
+    padding: 10px;
+    color:white;
+    background-color: green;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.reset{
+    padding: 10px;
+    color:white;
+    background-color: orange;
+    border: 1px solid;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body bgcolor="lightblue" align="center">
+
+<h1>This Is Student Registration Form</h1>
+
+<form action="update_student" method="POST">
+      <table border="1" cellspacing="10" cellpadding="10" bgcolor="pink" align="center">
+            <tr>
+                <td >rollno</td>
+                <td><input type ="int" name ="rollno" value="{{getData[4]}}" required><input type ="hidden" name ="id" value="{{getData[0]}}"></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input type ="text" name ="name" value="{{getData[1]}}" required></td>
+            </tr>
+            <tr>
+                <td>contact</td>
+                <td><input type ="text" name ="contactno" value="{{getData[6]}}" required></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type ="text" name ="email" value="{{getData[5]}}" required></td>
+            </tr>
+            <tr>
+                <td>college</td>
+                <td><input type ="text" name ="college" value="{{getData[3]}}" required></td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td><input type ="text" name ="address" value="{{getData[7]}}" required></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type ="text" name ="password" value="{{getData[2]}}" required></td>
+            </tr>
+            <tr>
+                <td><input class="submit" type ="Submit" value="Update"></td>
+                <td><input  class="reset" type ="reset"</td>
+
+            </tr>
+      </table>
+</form>
+<h2><a class="home" href="/home">Home</a></h2>
+
+</body>
+
+
+</html>

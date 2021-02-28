@@ -1,0 +1,29 @@
+<html>
+<head>
+<style>
+h2 a{
+    border: 1px solid;
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    border-radius: 1rem;
+    padding: 10px;
+}
+h1{
+    font-size:60px;
+}
+
+</style>
+</head>
+<body align="center" bgcolor="lightblue">
+
+    <h1> Welcome {{ session['username'] }} </h1>
+    <br>
+    <h2><a href = "reg">Add Student</a></h2>
+    <br>
+    <h2><a href = "showList">Show Student List</a></h2>
+    <br>
+    <h2><a href = "logout">Logout</a></h2>
+
+</body>
+</html>

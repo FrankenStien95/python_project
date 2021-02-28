@@ -1,0 +1,81 @@
+<html>
+<head>
+<style>
+a.home{
+    padding: 10px;
+    color:white;
+    background-color: purple;
+    border: 1px solid;
+    border-radius: 5px;
+}
+h1{
+    font-size:50px;
+}
+table tr td {
+    border:none;
+    text-align:right;
+    text-transform: uppercase;
+}
+.submit{
+    padding: 10px;
+    color:white;
+    background-color: green;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.reset{
+    padding: 10px;
+    color:white;
+    background-color: orange;
+    border: 1px solid;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body align="center" bgcolor="lightblue">
+
+<h1>This Is Student Registration Form</h1>
+
+<form action = "add_student" method = "POST">
+      <table border="1" cellspacing="10" cellpadding="10" align="center" bgcolor="pink">
+            <tr>
+                <td >rollno</td>
+                <td><input type ="int" name ="rollno" required></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input type ="text" name ="name"  required></td>
+            </tr>
+            <tr>
+                <td>contact</td>
+                <td><input type ="text" name ="contactno"  required></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type ="email" name ="email"  required></td>
+            </tr>
+            <tr>
+                <td>college</td>
+                <td><input type ="text" name ="college"  required></td>
+            </tr>
+            <tr>
+                <td>address</td>
+                <td><input type ="text" name ="address"  required></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td><input type ="text" name ="password"  required></td>
+            </tr>
+            <tr>
+                <td><input class="submit" type ="Submit"></td>
+                <td><input class="reset" type ="reset"</td>
+
+            </tr>
+      </table>
+</form>
+<h2><a class="home" href="/home">Home</a></h2>
+
+</body>
+
+
+</html>
